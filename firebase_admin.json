@@ -1,13 +1,12 @@
 {
   "type": "service_account",
-  "project_id": "smol-devs",
-  "private_key_id": "a33333e736ff96a63fcf6e0ca7c02966f118ee8f",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCyN8apEInFgwoX\nMWtApDSje+EcqF3ZbR1AkVJUQHSagftp5SG11qiNDIi9fCkXL8mM1kpkSkBjm+wu\njMOh9gUJ6ttE2sp5F1sDxATgv+lPhsycdQY/C6JhiUEa31CmazGMhNBEOK5ARQep\ngem9mLpjKihuc3ct7nmGEdRRz9oDxPmntg84SZbLI7My+QsmUd17HBlpWgPx6q67\nzTIlyiAQymVaOtH05fiuuJ0Hl8YJnGGLCvZMfAzA1qF6YXr6UV4zJ3WSqKfFSKFf\nsP1Ax7G6Xl+r7bP312emixQxNIVpmlPHCnTHfkB5tp5xusSMCXWCssw9hHhsJHFq\nV07FhCedAgMBAAECggEAI8Fd+ZhoU7ilIx8Wmgr3xp75fJLo9VDXcBdX0bB21HLk\nmovOdhmBin7rxjxtUAoV4Uwy86kT/wgO3A4Ax/NAcotsf4V33tCJQZmnsuG98Ocm\nEPPHk4mFhBUR+063cxQJhlw1HqLSjvFqhp8aYqAMMQ4Ju5Mt44i3V+cm1l0hq+SY\nA61EG/mPQ7QsFiB16JEaIAWjzkjSfYztwy18zVSZUf7erfihTP1pxG3D1dvtao3x\ngsXSMHBijoQSVIoRnLSbd9fxtKfW2smLhCsATaKxnZdpktOnwdYK9V9M8/83ge7n\nnHhRD5BIosEFx6JAoteb7tmBYU53+ttIWedf2kM/YQKBgQD0s7aQTStpmq74UyuJ\nqIi7WYDj3F80cXtYAQjOCIcvK6hE0lvWTd15coYmEBZZvctMPhd/GN8hCbyzHD8I\nRGE0NQ07/nK+mpMz0akEupSi5+LXUmOvKlDNRx+57oeq8iPj3xV858mcGXz72jp8\nWIL4oaOgYR7n8wgRl7A9a2jszQKBgQC6cj7B9VYW5CAeLLU8ZGMRgGZrflh5kuJc\nYiyapy2vyS45ZZuSqx4h/zKCHGVaEB1xYRiOeQqLzvWLfNcvKg1nibQOPypJfeBX\n62sNvmY9SBSIm6KPFoW4nHPTTI2JNMKuLtklKcWso97HNi4fn8hvzk+aPU0nO2Bb\n8dlGkf4mEQKBgEDYSt3MhV+TzSAjMhtlnO5A1qYLZPNJy0zT4Vhv7Br0779lG08c\nDT+8uI3nn3SilfgbUDCvD5n6sZWpO47eSAAEuwAV+qRF5BJMUgTdyLuuxW8X9zCY\n/xaW7XJhInSLfDVLja8u4T9LhdJbzznaXsKyWuEKO51tysqWru5nw0NVAoGBALS3\ndbMEfOx1M9hrl0OxPgFBxoRck59LSxMmqXtBndvsEVza6r9wEyX6uNc6dNamFhPG\nfEnkct9uu7v3Ro/Vn+aCp77DZNaVJvWxHzPUID839Ycv65Hrz7NQGkhtxCaAuE6i\n5CDMa2jZ8V6AWpaWhm4wuCGVV4o2WEDmm6Z2bbQxAoGADmQVKOXfgMMEa5qoKFHC\niKjF+pqdBhLChqtL1JGCSZHXrbnbvFj1HgNN/x3QQSPFQeoE6VgRpZSm0nvfzG7f\nVrKTsvY/FtMkLvvMZXFDo4co706JWIGpLz+dwo9jtxx29Wkw4nQl+w1zdkfrcRcL\nP8a0PyD5+7E/et2U4jVi+8Q=\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-fbsvc@smol-devs.iam.gserviceaccount.com",
-  "client_id": "102701171196110667792",
+  "project_id": process.env.FIREBASE_PROJECT_ID,
+  "private_key_id": process.env.FIREBASE_PRIVATE_KEY_ID,
+  "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+  "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+  "client_id": process.env.FIREBASE_CLIENT_ID,
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40smol-devs.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
+  "client_x509_cert_url": process.env.FIREBASE_CLIENT_CERT_URL
 }
