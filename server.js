@@ -110,9 +110,5 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
 });
 
 // Load config first, then start server
-loadConfig().then(() => {
-  const PORT = process.env.PORT || 4242;
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-}).catch(err => {
-  console.error('Failed to load config:', err);
-});
+
+  app.listen(4242, () => console.log(`Server running on port 4242`));
